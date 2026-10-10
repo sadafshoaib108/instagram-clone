@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Instagram App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar-content">
+            <h1>Instagram</h1>
+
+            <nav>
+                <a href="#posts">Home</a>
+                <a href="#profile">Profile</a>
+                <button onclick="logout()">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Main Layout -->
+    <main class="main-container">
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-card">
+                <h2>My Profile</h2>
+                <div id="profile"></div>
+            </div>
+
+            <div class="sidebar-card">
+                <h2>Follow User</h2>
+
+                <button onclick="followUser()">Follow</button>
+                <button onclick="unfollowUser()">Unfollow</button>
+            </div>
+
+        </aside>
+
+
+        <!-- Center Feed -->
+        <section class="feed-section">
+
+            <!-- Create Post -->
+            <div class="create-post-card">
+
+                <h2>Create Post</h2>
+
+                <input id="post-image" type="text" placeholder="Image URL">
+
+                <input id="post-caption" type="text" placeholder="Write a caption...">
+
+                <button onclick="createPost()">Create Post</button>
+
+            </div>
+
+
+            <!-- Posts -->
+            <div class="posts-section">
+
+                <h2>Posts</h2>
+
+                <div id="posts"></div>
+
+            </div>
+
+
+            <!-- Feed -->
+            <div class="feed-section-inner">
+
+                <h2>My Feed</h2>
+
+                <div id="feed"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+
+            <!-- Login -->
+            <div class="auth-card">
+
+                <h2>Login</h2>
+
+                <input id="login-email" type="email" placeholder="Email">
+
+                <input id="login-password" type="password" placeholder="Password">
+
+                <button onclick="login()">Login</button>
+
+            </div>
+
+
+            <!-- Signup -->
+            <div class="auth-card">
+
+                <h2>Sign Up</h2>
+
+                <input id="signup-email" type="email" placeholder="Email">
+
+                <input id="signup-password" type="password" placeholder="Password">
+
+                <button onclick="signUp()">Sign Up</button>
+
+            </div>
+
+
+            <!-- Comments -->
+            <div class="comments-card">
+
+                <h2>Comments</h2>
+
+                <div id="comments"></div>
+
+            </div>
+
+
+            <!-- Like -->
+            <div class="like-card">
+
+                <h2>Like Post</h2>
+
+                <button onclick="likePost()">❤️ Like</button>
+                <button onclick="unlikePost()">Unlike</button>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- App JS -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
